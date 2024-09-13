@@ -23,11 +23,11 @@ class FileHandler
     ~FileHandler(); 
     
     // Reads a file and puts it into the buffer. Sets state accordingly.
-    void readFile(std::filesystem::path filepath
+    void read(std::filesystem::path filepath
                     , std::stringstream& buffer );   
     
     // Writes a given string to a given filepath.  
-    void writeFile( std::string prompt
+    void write( std::string prompt
         , std::filesystem::path filepath); 
     
     // Keeps record of errors etc.
