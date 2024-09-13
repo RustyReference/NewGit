@@ -20,6 +20,8 @@ To learn how git works as well as how to work together for future projects.
 ---
 ### Roadmap 
 * Add a licence.
+* Add a logger
+* Add naming functionality to the logger
 * Ability to initialize a repository.
 * Ability to save versions with commit, push, etc.
 * Ability to switch between and delete versions.
