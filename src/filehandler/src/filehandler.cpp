@@ -1,8 +1,8 @@
 #include "filehandler.h"
 #include <iostream>
 
-// FileHandler::FileHandler(){}
-// FileHandler::~FileHandler(){}
+FileHandler::FileHandler(){}
+FileHandler::~FileHandler(){}
 
 void FileHandler::
 read(std::filesystem::path filepath
@@ -17,20 +17,14 @@ read(std::filesystem::path filepath
         return;
     }
     
-    // Read from file into buffer one line at a time.
-    std::string temp;
-    while(readFile >> temp)
-    {
-        buffer << temp << '\n';
-    }
-
     // Check empty 
     if( buffer.rdbuf()->in_avail() == 0 )
     {
         currentState = States::readEmpty;
     }
 
-    // Finalize
+    // Fill the buffer 
+    buffer << readFile.rdbuf();
     readFile.close();
     currentState = States::readSuccess;
 }
@@ -60,4 +54,3 @@ write( std::string prompt
     writeFile.close();
     currentState = States::writeSuccess;
 }
-
