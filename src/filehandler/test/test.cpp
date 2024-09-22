@@ -5,7 +5,6 @@ using namespace std::filesystem;
 void testRead( path readPath );
 void testWrite( path writePath );
 
-FileHandler fileHandler;
 std::string prompt // For testing fileHandler.write function.
 {
     "#include <iostream>\n"
@@ -37,7 +36,7 @@ int main(int argc, char *argv[])
 void testRead( path readPath )
 {
     std::stringstream buff;
-    if( !fileHandler.read(readPath, buff) )
+    if( !FH::read(readPath, buff) )
     {
         std::cerr << "Could not read from " << readPath << '\n';
         return;
@@ -49,7 +48,7 @@ void testRead( path readPath )
 // Works if "prompt" is written to writePath despite spaces etc.
 void testWrite( path writePath )
 {
-    if( !fileHandler.write(writePath, prompt) )
+    if( !FH::write(writePath, prompt) )
     {
         std::cerr << "Could not write to " << writePath << '\n';
         return;

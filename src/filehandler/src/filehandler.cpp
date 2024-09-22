@@ -1,18 +1,17 @@
 #include "filehandler.h"
 #include <iostream>
 
-FileHandler::FileHandler(){}
-FileHandler::~FileHandler(){}
+FH::States state;
 
-bool FileHandler::
-read(std::filesystem::path filepath, std::stringstream& buffer )
+bool FH::read(path filepath, std::stringstream& buffer )
 {
     // Initialize readFile 
     std::ifstream readFile{ filepath, std::ios_base::in };    
     if( !readFile )
     {
-        std::cerr << "Could not open readFile : " << filepath << std::endl;
-        currentState = States::readError;
+        std::cerr << "Could not open readFile : " << filepath;
+        std::cerr << std::endl;
+        state = States::readError;
         return false;
     }
 
@@ -23,24 +22,24 @@ read(std::filesystem::path filepath, std::stringstream& buffer )
     buffer << readFile.rdbuf() ;
     if( readFile.fail() && !readFile.eof() )
     {
-        std::cerr << "Could not read to buffer : " << filepath << std::endl;
-        currentState = States::readError;
+        std::cerr << "Could not read to buffer : " << filepath; 
+        std::cerr << std::endl;
+        state = States::readError;
         return false;
     }
     readFile.close();
-    currentState = States::readSuccess;
+    state = States::readSuccess;
     return true;
 }
  
-bool FileHandler::
-write(std::filesystem::path filepath, std::string prompt)
+bool FH::write(path filepath, std::string prompt)
 {
     // Initialize writeFile 
     std::ofstream writeFile{ filepath, std::ios_base::trunc };    
     if( !writeFile )
     {
         std::cerr << "Could not open writeFile : " << filepath << std::endl;
-        currentState = States::writeError;
+        state = States::writeError;
         return false;
     }
     
@@ -48,12 +47,14 @@ write(std::filesystem::path filepath, std::string prompt)
     if( writeFile.fail() )
     {
         std::cerr << "Couldn't write to : " << filepath << '\n';
-        currentState = States::writeError;
+        state = States::writeError;
         return 0;
     }
 
     // Finalize
     writeFile.close();
-    currentState = States::writeSuccess;
+    state = States::writeSuccess;
     return true;
 }
+
+

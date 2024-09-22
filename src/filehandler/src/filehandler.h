@@ -6,29 +6,22 @@
 #include <string_view>
 #include <sstream>
 
-// To keep record of the current state of the FileHandler class.
-enum States
-{
-    readSuccess,
-    readError,
-    readEmpty,
-    writeSuccess,
-    writeError
-};
+using namespace std::filesystem;
 
-class FileHandler 
+namespace FH
 {
-    public:
-    FileHandler();  
-    ~FileHandler(); 
-    
-    // Reads a file and puts it into the buffer. Return false on fail.
-    bool read(std::filesystem::path filepath, std::stringstream& buffer );    
-    // Writes a given string to a given filepath.  
-    bool write( std::filesystem::path filepath, std::string prompt); 
-    
-    // Keeps record of errors etc.
-    States currentState;
-};
+    // To keep record of the current state of the FileHandler class.
+    enum States
+    {
+        readSuccess,
+        readError,
+        readEmpty,
+        writeSuccess,
+        writeError
+    };
+
+    bool write( path filepath, std::string prompt); 
+    bool read( path filepath, std::stringstream& buffer );
+}
 
 #endif
