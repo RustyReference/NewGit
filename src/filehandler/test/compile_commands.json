@@ -12,9 +12,6 @@
       "-o",
       "./test",
       "./test.cpp"
-    ],
-    "directory": "/home/jankatarch/projects/github/NewGit/src/filehandler/test",
-    "file": "/home/jankatarch/projects/github/NewGit/src/filehandler/test/test.cpp",
-    "output": "/home/jankatarch/projects/github/NewGit/src/filehandler/test/test"
+    ]
   }
 ]
