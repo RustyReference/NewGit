@@ -13,8 +13,6 @@ bool FH::read(path filepath, std::stringstream& buffer )
     std::ifstream readFile{ filepath, std::ios_base::in };    
     if( !readFile )
     {
-        std::cerr << "Could not open readFile : " << filepath;
-        std::cerr << std::endl;
         state = States::readError;
         return false;
     }
@@ -26,8 +24,6 @@ bool FH::read(path filepath, std::stringstream& buffer )
     buffer << readFile.rdbuf() ;
     if( readFile.fail() && !readFile.eof() )
     {
-        std::cerr << "Could not read to buffer : " << filepath; 
-        std::cerr << std::endl;
         state = States::readError;
         return false;
     }
@@ -41,7 +37,6 @@ bool FH::write(path filepath, std::string prompt)
     std::ofstream writeFile{ filepath, std::ios_base::trunc };    
     if( !writeFile )
     {
-        std::cerr << "Could not open writeFile : " << filepath << std::endl;
         state = States::writeError;
         return false;
     }
@@ -49,7 +44,6 @@ bool FH::write(path filepath, std::string prompt)
     writeFile << prompt;
     if( writeFile.fail() )
     {
-        std::cerr << "Couldn't write to : " << filepath << '\n';
         state = States::writeError;
         return 0;
     }
@@ -59,11 +53,32 @@ bool FH::write(path filepath, std::string prompt)
     return true;
 }
 
+bool FH::append( path filepath, std::string prompt )
+{ 
+    // Initialize appendFile 
+    std::ofstream appendFile{ filepath, std::ios_base::app };
+    if( !appendFile )
+    {
+        state = States::appendError;
+        return false;
+    }
+    
+    appendFile << prompt;
+    if( appendFile.fail() )
+    {
+        state = States::appendError;
+        return 0;
+    }
+
+    // Finalize
+    appendFile.close();
+    return true;
+}
+
 bool FH::mkdir( path folderPath )
 {
     if( !create_directory( folderPath ) )
     {
-        std::cerr << "Could not make directory" << std::endl;
         return false;
     }
     return true;
@@ -80,13 +95,9 @@ bool FH::mkdirp( path folderPath )
     for(const auto words : std::views::split(pathInStr, delimiter))
     {
         ss << std::string_view(words) << '/';
-        if( exists(ss.str()) ) 
+        if( !exists(ss.str()) ) 
         {
-            continue;
-        }
-        if( !mkdir(ss.str()) )
-        {
-            std::cerr << "mkdir failed\n";
+            mkdir( ss.str() );
         }
     }
 

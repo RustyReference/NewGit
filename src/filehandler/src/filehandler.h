@@ -16,11 +16,13 @@ namespace FH
         readError,
         readEmpty,
         writeError,
+        appendError,
         copyError,
     };
 
-    bool write( path filepath, std::string prompt); 
     bool read( path filepath, std::stringstream& buffer );
+    bool write( path filepath, std::string prompt); 
+    bool append( path filepath, std::string prompt );
     bool mkdir( path folderPath );
     bool mkdirp( path folderPath );
 }
