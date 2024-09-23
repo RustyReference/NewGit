@@ -1,0 +1,20 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "--std=c++23",
+      "-Wall",
+      "-Wextra",
+      "-Weffc++",
+      "-Wno-sign-conversion",
+      "-Werror",
+      "-c",
+      "-o",
+      "../filehandler.o",
+      "./filehandler.cpp"
+    ],
+    "directory": "/home/jankatarch/projects/github/NewGit/src/filehandler/src",
+    "file": "/home/jankatarch/projects/github/NewGit/src/filehandler/src/filehandler.cpp",
+    "output": "/home/jankatarch/projects/github/NewGit/src/filehandler/filehandler.o"
+  }
+]

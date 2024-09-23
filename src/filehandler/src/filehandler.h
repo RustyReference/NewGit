@@ -13,15 +13,16 @@ namespace FH
     // To keep record of the current state of the FileHandler class.
     enum States
     {
-        readSuccess,
         readError,
         readEmpty,
-        writeSuccess,
-        writeError
+        writeError,
+        copyError,
     };
 
     bool write( path filepath, std::string prompt); 
     bool read( path filepath, std::stringstream& buffer );
+    bool mkdir( path folderPath );
+    bool mkdirp( path folderPath );
 }
 
 #endif

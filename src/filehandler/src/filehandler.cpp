@@ -1,8 +1,12 @@
 #include "filehandler.h"
 #include <iostream>
+#include <ranges>
+
+#include <string_view>
+#include <iomanip>
+
 
 FH::States state;
-
 bool FH::read(path filepath, std::stringstream& buffer )
 {
     // Initialize readFile 
@@ -28,7 +32,6 @@ bool FH::read(path filepath, std::stringstream& buffer )
         return false;
     }
     readFile.close();
-    state = States::readSuccess;
     return true;
 }
  
@@ -53,8 +56,39 @@ bool FH::write(path filepath, std::string prompt)
 
     // Finalize
     writeFile.close();
-    state = States::writeSuccess;
     return true;
 }
 
+bool FH::mkdir( path folderPath )
+{
+    if( !create_directory( folderPath ) )
+    {
+        std::cerr << "Could not make directory" << std::endl;
+        return false;
+    }
+    return true;
+}
 
+bool FH::mkdirp( path folderPath ) 
+{
+    std::stringstream ss; 
+    ss << "./";
+
+    // C++ 23 provides an easier "split" method!
+    const std::string pathInStr{ folderPath };
+    const std::string delimiter{ "/" };
+    for(const auto words : std::views::split(pathInStr, delimiter))
+    {
+        ss << std::string_view(words) << '/';
+        if( exists(ss.str()) ) 
+        {
+            continue;
+        }
+        if( !mkdir(ss.str()) )
+        {
+            std::cerr << "mkdir failed\n";
+        }
+    }
+
+    return true;
+}

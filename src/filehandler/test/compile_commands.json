@@ -1,0 +1,20 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "--std=c++23",
+      "-Wall",
+      "-Wextra",
+      "-Weffc++",
+      "-Wno-sign-conversion",
+      "-Werror",
+      "-o",
+      "./test",
+      "./test.cpp"
+    ],
+    "directory": "/home/jankatarch/projects/github/NewGit/src/filehandler/test",
+    "file": "/home/jankatarch/projects/github/NewGit/src/filehandler/test/test.cpp",
+    "output": "/home/jankatarch/projects/github/NewGit/src/filehandler/test/test"
+  }
+]
