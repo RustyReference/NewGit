@@ -12,6 +12,9 @@
       "-o",
       "../filehandler.o",
       "./filehandler.cpp"
-    ]
+    ],
+    "directory": ".",
+    "file": "./filehandler.cpp",
+    "output": "../filehandler.o"
   }
 ]
