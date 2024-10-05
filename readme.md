@@ -12,7 +12,7 @@ To learn how git works as well as how to work together for future projects.
 
 ---
 ### Planned Features
-* Initialzie a repository
+* Initialize a repository
 * Add versions with commit, add, and push.
 * Make different branches.
 * Go back and forth between versions, branches, and so on.

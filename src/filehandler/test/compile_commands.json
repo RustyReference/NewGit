@@ -1,0 +1,21 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "--std=c++23",
+      "-Wall",
+      "-Wextra",
+      "-Weffc++",
+      "-Wno-sign-conversion",
+      "-Werror",
+      "../filehandler.o",
+      "-o",
+      "./test",
+      "./test.cpp"
+    ],
+    "directory": ".",
+    "file": "./test.cpp",
+    "output": "./test"
+  }
+]
