@@ -28,4 +28,3 @@ void gitPull() {
     cin >> name;
 }
 
-///unordered_map<string, string>
