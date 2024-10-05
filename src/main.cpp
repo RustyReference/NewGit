@@ -9,7 +9,7 @@ void gitPull();
 void gitPush();
 
 int main(int argc, char* argv[]) {
-
+    
 }
 
 // Initializes a repository
@@ -18,7 +18,7 @@ void gitInitialize() {
 }
 
 // Pulls changes from a remote repository
-void gitPull() {
+void gitPush() {
     
 }
 
@@ -29,4 +29,3 @@ void gitPull() {
     cin >> name;
 }
 
-///unordered_map<string, string>
