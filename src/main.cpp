@@ -20,12 +20,12 @@ int main(int argc, char* argv[]) {
     //Logger::getInstance().addVersion(name, ".", "./log/");
     // A TRIAL TEST CASE ONLY: If "test2" does not exist yet, then 
     // it will be created.
-//    fs::copy("test", "test2", fs::copy_options::recursive);
+    // fs::copy("test", "test2", fs::copy_options::recursive);
 }
 
 // Initializes a repository
 void gitInitialize(fs::path path) {
-    
+
 }
 
 // Pulls changes from a remote repository
