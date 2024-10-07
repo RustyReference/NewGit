@@ -1,4 +1,5 @@
 #include <iostream>
+#include "./logger/logger.h"
 #include <string>
 #include <filesystem> //Might delete later?
 //#include "filehandler.h"
@@ -10,9 +11,11 @@ void gitPull();
 void gitPush();
 
 int main(int argc, char* argv[]) {
+    std::string name = "3.30.4";
+    Logger::getInstance().addVersion(name, "../../src", "logs");
     // A TRIAL TEST CASE ONLY: If "test2" does not exist yet, then 
     // it will be created.
-    fs::copy("test", "test2", fs::copy_options::recursive);
+//    fs::copy("test", "test2", fs::copy_options::recursive);
 }
 
 // Initializes a repository

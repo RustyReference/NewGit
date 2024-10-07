@@ -1,6 +1,7 @@
 #include <unordered_map>
 #include <string>
 #include <filesystem>
+#include "filehandler/src/filehandler.h"
 
 #ifndef LOGGER_H_INCLUDED
 #define LOGGER_H_INCLUDED
@@ -15,6 +16,7 @@ private:
     ~Logger(); // The Logger should only be destroyed when the program ends
 
 public:
+
     /**
      * The copy constructor of this class should be deleted
      */
