@@ -1,3 +1,4 @@
+
 #include <unordered_map>
 #include <string>
 #include <filesystem>
@@ -17,7 +18,7 @@ Logger::~Logger() {
 void Logger::addVersion(string& name, filesystem::path init,
                                       filesystem::path end) {
     FH::mkdirp( end / name );
-    std::filesystem::copy_file(init, end / name); 
+    std::filesystem::copy(init, end / name); 
 }
 
 void Logger::deleteVersion(string& name, filesystem::path init,
@@ -25,7 +26,7 @@ void Logger::deleteVersion(string& name, filesystem::path init,
 
 }
 
+Logger* Logger::instance = new Logger();
 
 // Initialize static instance of Logger. 
-// Logger* Logger::instance = nullptr;
-// Cannot do in cpp and h at the same time
+

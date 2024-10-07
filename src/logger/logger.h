@@ -1,26 +1,27 @@
+#ifndef LOGGER_H_INCLUDED
+#define LOGGER_H_INCLUDED
+
 #include <unordered_map>
 #include <string>
 #include <filesystem>
 #include "filehandler/src/filehandler.h"
 
-#ifndef LOGGER_H_INCLUDED
-#define LOGGER_H_INCLUDED
 
 using namespace std;
 
 class Logger {
 private:
-    static Logger* instance;
+    Logger(const Logger&);
     unordered_map<string, filesystem::path> logMap;
     Logger(); 
     ~Logger(); // The Logger should only be destroyed when the program ends
 
 public:
+    static Logger* instance;
 
     /**
      * The copy constructor of this class should be deleted
      */
-    Logger(const Logger&) = delete;
 
     /**
      * The assignment operator of this class should be deleted to prevent any 
@@ -81,6 +82,6 @@ public:
 };
 
 // Initialize static instance of Logger
-Logger* Logger::instance = nullptr;
+
 
 #endif
