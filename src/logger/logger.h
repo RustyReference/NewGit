@@ -79,6 +79,6 @@ public:
 };
 
 // Initialize static instance of Logger
-Logger* Logger::instance = nullptr;
+Logger* Logger::instance = new Logger();
 
 #endif
