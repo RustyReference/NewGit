@@ -1,46 +1,76 @@
 #include <iostream>
 #include "./logger/logger.h"
 #include <string>
-#include <filesystem> //Might delete later?
-//#include "filehandler.h"
-#include "./logger/logger.h"
+#include <filesystem> 
+
 using namespace std;
 namespace fs = filesystem;
 
 void gitInitialize();
 void gitPull();
-void gitPush();
+void gitPush(string versionName);
 void help();
 
-int main(int argc, char* argv[]) { 
-    std::string name = "3.30.4";
-    std::filesystem::path init{"./"};
-    std::filesystem::path log("./log/");
-    Logger::getInstance().addVersion(name, init, log);
-    //Logger::getInstance().addVersion(name, ".", "./log/");
-    // A TRIAL TEST CASE ONLY: If "test2" does not exist yet, then 
-    // it will be created.
-    // fs::copy("test", "test2", fs::copy_options::recursive);
+int main(int argc, char* argv[]) {
+    string prompt;
+    if(argc <= 1 || argc > 3) {
+        prompt = "help";
+    }
+    else {
+        prompt = argv[1];
+    }
+
+    if(prompt == "push"){
+        gitPush(argv[2]);
+    }
+
+    if(prompt == "help"){
+        help();
+    }
+
+
+    return 0;
 }
 
 // Initializes a repository
-void gitInitialize(fs::path path) {
+void gitInitialize() {
+    FH::mkdirp(".newgit/log/");
+}
 
+// Pulls changes from a remote repository
+void gitPush(string versionName) {
+    if ( !Logger::getInstance().addVersion(versionName, "./", "./.newgit/log/") ) {
+        if(Logger::getInstance().state == Logger::State::errAddExist) {
+            cout << "Folder exists. Use \'force-push\' to replace instead\n";
+        }
+        cout << "Could not add version : " << versionName << endl;
+        return;
+    }
+    cout << "Succesfully added version : " << versionName << endl;
+}
+
+void forcePush(string versionName) {
+    // true at the end = "force"
+    if(!Logger::getInstance().addVersion(versionName, "./", "./.newgit/log", true)) {
+        cout << "Could not add version : " << versionName << endl;
+        return;
+    }
+    cout << "Succesfully added version : " << versionName << endl;
 }
 
 // Pulls changes from a remote repository
 void gitPull() {
-    cout << "Pull";
-}
-
-// Pushes changes to a remote repository
-void gitPush() {
-    cout << "Push";
+    string name;
+    cout << "Enter the name of your new version: ";
+    cin >> name;
 }
 
 // Prints all the possible commands the user can make
 void help() {
-    cout << "Help";
+    cout << "Usage : \n";
+    cout << "\tnewgit push <versionName>\n"
+            "\tnewgit pull <versionName>\n"
+            "\tnewgit force-push <versionName>\n"
+            "\tnewgit help\n";
 }
-
 

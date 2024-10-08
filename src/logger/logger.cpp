@@ -1,7 +1,8 @@
-#include <iostream>
+
 #include <unordered_map>
 #include <string>
 #include <filesystem>
+#include <iostream>
 #include "logger.h"
 
 using namespace std;
@@ -12,18 +13,44 @@ Logger::Logger() {
 } 
 
 Logger::~Logger() {
-    cout << "THE PROGRAM SHOULD BE TERMINATING";
+    std::cerr << "THE PROGRAM SHOULD BE TERMINATING";
 }
 
+<<<<<<< HEAD
 void Logger::addVersion(string& name, filesystem::path init,
                                       filesystem::path end) {
     FH::mkdirp(end / name);
     std::filesystem::copy(init, end / name); 
+=======
+bool Logger::addVersion(string name, filesystem::path init,
+                        filesystem::path end, bool replace) 
+{
+    if ( !replace && std::filesystem::exists(end/name) ) {
+        state = Logger::State::errAddExist;
+        return false; 
+    }
+    FH::mkdirp( end/name );
+    for(auto &entry : std::filesystem::directory_iterator(init)) {
+        // Get path name from the last '/'
+        // For example "./a/b/c/hello" would turn into hello
+        std::string path = entry.path();
+        if( path[path.length()] == '/' ) {
+            path.pop_back();
+        }
+        int nameStart = path.rfind('/');
+        std::string pathName = path.c_str()+nameStart+1;
+        // copy path if it's not the .newgit directory
+        if(pathName != ".newgit") {
+            std::filesystem::copy(path, end/name
+                , std::filesystem::copy_options::recursive);
+        }
+    }
+    return true;
+>>>>>>> 51e7c9c15d3a0074d66c7b769c4c9c629bacef1e
 }
 
-void Logger::deleteVersion(string& name, filesystem::path init,
-                                         filesystem::path end) {
-
+void Logger::deleteVersion(string name, filesystem::path end) {
+    std::filesystem::remove_all( end/name );
 }
 
 Logger* Logger::instance = new Logger();

@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.30.4/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.30.4/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/charlesdoan/CodingFiles/NewGit
+CMAKE_SOURCE_DIR = /home/janyan/Projects/git/NewGit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/charlesdoan/CodingFiles/NewGit/build
+CMAKE_BINARY_DIR = /home/janyan/Projects/git/NewGit/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/charlesdoan/CodingFiles/NewGit/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/opt/homebrew/Cellar/cmake/3.30.4/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/Cellar/cmake/3.30.4/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/charlesdoan/CodingFiles/NewGit/build/CMakeFiles /Users/charlesdoan/CodingFiles/NewGit/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/janyan/Projects/git/NewGit/build/CMakeFiles /home/janyan/Projects/git/NewGit/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/charlesdoan/CodingFiles/NewGit/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/janyan/Projects/git/NewGit/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,29 @@ NewGit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/build
 .PHONY : NewGit/fast
 
-src/logger/filehandler/src/filehandler.o: src/logger/filehandler/src/filehandler.cpp.o
-.PHONY : src/logger/filehandler/src/filehandler.o
+src/logger/filehandler/filehandler.o: src/logger/filehandler/filehandler.cpp.o
+.PHONY : src/logger/filehandler/filehandler.o
 
 # target to build an object file
-src/logger/filehandler/src/filehandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o
-.PHONY : src/logger/filehandler/src/filehandler.cpp.o
+src/logger/filehandler/filehandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o
+.PHONY : src/logger/filehandler/filehandler.cpp.o
 
-src/logger/filehandler/src/filehandler.i: src/logger/filehandler/src/filehandler.cpp.i
-.PHONY : src/logger/filehandler/src/filehandler.i
+src/logger/filehandler/filehandler.i: src/logger/filehandler/filehandler.cpp.i
+.PHONY : src/logger/filehandler/filehandler.i
 
 # target to preprocess a source file
-src/logger/filehandler/src/filehandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.i
-.PHONY : src/logger/filehandler/src/filehandler.cpp.i
+src/logger/filehandler/filehandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i
+.PHONY : src/logger/filehandler/filehandler.cpp.i
 
-src/logger/filehandler/src/filehandler.s: src/logger/filehandler/src/filehandler.cpp.s
-.PHONY : src/logger/filehandler/src/filehandler.s
+src/logger/filehandler/filehandler.s: src/logger/filehandler/filehandler.cpp.s
+.PHONY : src/logger/filehandler/filehandler.s
 
 # target to generate assembly for a file
-src/logger/filehandler/src/filehandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.s
-.PHONY : src/logger/filehandler/src/filehandler.cpp.s
+src/logger/filehandler/filehandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s
+.PHONY : src/logger/filehandler/filehandler.cpp.s
 
 src/logger/logger.o: src/logger/logger.cpp.o
 .PHONY : src/logger/logger.o
@@ -210,9 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... NewGit"
-	@echo "... src/logger/filehandler/src/filehandler.o"
-	@echo "... src/logger/filehandler/src/filehandler.i"
-	@echo "... src/logger/filehandler/src/filehandler.s"
+	@echo "... src/logger/filehandler/filehandler.o"
+	@echo "... src/logger/filehandler/filehandler.i"
+	@echo "... src/logger/filehandler/filehandler.s"
 	@echo "... src/logger/logger.o"
 	@echo "... src/logger/logger.i"
 	@echo "... src/logger/logger.s"

@@ -1,3 +1,3 @@
-/Users/charlesdoan/CodingFiles/NewGit/build/CMakeFiles/NewGit.dir
-/Users/charlesdoan/CodingFiles/NewGit/build/CMakeFiles/edit_cache.dir
-/Users/charlesdoan/CodingFiles/NewGit/build/CMakeFiles/rebuild_cache.dir
+/home/janyan/Projects/git/NewGit/build/CMakeFiles/NewGit.dir
+/home/janyan/Projects/git/NewGit/build/CMakeFiles/edit_cache.dir
+/home/janyan/Projects/git/NewGit/build/CMakeFiles/rebuild_cache.dir

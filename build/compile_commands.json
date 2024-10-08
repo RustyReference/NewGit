@@ -1,20 +1,20 @@
 [
 {
-  "directory": "/Users/charlesdoan/CodingFiles/NewGit/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o -c /Users/charlesdoan/CodingFiles/NewGit/src/logger/filehandler/src/filehandler.cpp",
-  "file": "/Users/charlesdoan/CodingFiles/NewGit/src/logger/filehandler/src/filehandler.cpp",
-  "output": "CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o"
+  "directory": "/home/janyan/Projects/git/NewGit/build",
+  "command": "/usr/bin/c++   -std=gnu++23 -o CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o -c /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp",
+  "file": "/home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp",
+  "output": "CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o"
 },
 {
-  "directory": "/Users/charlesdoan/CodingFiles/NewGit/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/NewGit.dir/src/logger/logger.cpp.o -c /Users/charlesdoan/CodingFiles/NewGit/src/logger/logger.cpp",
-  "file": "/Users/charlesdoan/CodingFiles/NewGit/src/logger/logger.cpp",
+  "directory": "/home/janyan/Projects/git/NewGit/build",
+  "command": "/usr/bin/c++   -std=gnu++23 -o CMakeFiles/NewGit.dir/src/logger/logger.cpp.o -c /home/janyan/Projects/git/NewGit/src/logger/logger.cpp",
+  "file": "/home/janyan/Projects/git/NewGit/src/logger/logger.cpp",
   "output": "CMakeFiles/NewGit.dir/src/logger/logger.cpp.o"
 },
 {
-  "directory": "/Users/charlesdoan/CodingFiles/NewGit/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/NewGit.dir/src/main.cpp.o -c /Users/charlesdoan/CodingFiles/NewGit/src/main.cpp",
-  "file": "/Users/charlesdoan/CodingFiles/NewGit/src/main.cpp",
+  "directory": "/home/janyan/Projects/git/NewGit/build",
+  "command": "/usr/bin/c++   -std=gnu++23 -o CMakeFiles/NewGit.dir/src/main.cpp.o -c /home/janyan/Projects/git/NewGit/src/main.cpp",
+  "file": "/home/janyan/Projects/git/NewGit/src/main.cpp",
   "output": "CMakeFiles/NewGit.dir/src/main.cpp.o"
 }
 ]
