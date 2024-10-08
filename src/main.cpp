@@ -12,7 +12,7 @@ void gitPull();
 void gitPush();
 void help();
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) { 
     std::string name = "3.30.4";
     std::filesystem::path init{"./"};
     std::filesystem::path log("./log/");

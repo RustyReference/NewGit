@@ -17,7 +17,7 @@ Logger::~Logger() {
 
 void Logger::addVersion(string& name, filesystem::path init,
                                       filesystem::path end) {
-    FH::mkdirp( end / name );
+    FH::mkdirp(end / name);
     std::filesystem::copy(init, end / name); 
 }
 
