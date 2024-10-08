@@ -1,3 +1,4 @@
+
 #include <unordered_map>
 #include <string>
 #include <filesystem>
@@ -11,7 +12,7 @@ Logger::Logger() {
 } 
 
 Logger::~Logger() {
-    //cout << "THE PROGRAM SHOULD BE TERMINATING";
+    cout << "THE PROGRAM SHOULD BE TERMINATING";
 }
 
 bool Logger::addVersion(string name, filesystem::path init,
@@ -47,4 +48,5 @@ void Logger::deleteVersion(string name, filesystem::path end) {
 Logger* Logger::instance = new Logger();
 
 // Initialize static instance of Logger. 
+
 

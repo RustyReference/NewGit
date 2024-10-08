@@ -50,5 +50,9 @@ void gitPull() {
     string name;
     cout << "Enter the name of your new version: ";
     cin >> name;
+
+// Prints all the possible commands the user can make
+void help() {
+    cout << "Help";
 }
 
