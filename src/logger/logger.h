@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <string>
 #include <filesystem>
-#include "filehandler/src/filehandler.h"
+#include "filehandler/filehandler.h"
 
 
 using namespace std;
@@ -17,6 +17,11 @@ private:
     ~Logger(); // The Logger should only be destroyed when the program ends
 
 public:
+    enum State {
+        errAddExist,
+        errRemoveNonExist,
+    } state;
+
     static Logger* instance;
 
     /**
@@ -51,19 +56,17 @@ public:
      * end: the path to the "log" directory, where all the versions of 
      *      the user's source code are stored.
      */
-    void addVersion(string& name, filesystem::path init, filesystem::path end);
+    bool addVersion(string name, filesystem::path init, filesystem::path end, bool replace = false);
 
     /**
      * Deletes a version (a copy of program files) specified by the user and 
      * located in a directory specified by path.
      * 
      * name: the name of the update the user specifies
-     * init: the path to the directory containing the files/directories
-     *       the user wants to copy
      * end: the path to the "log" directory, where all the versions of 
      *      the user's source code are stored.
      */
-    void deleteVersion(string& name, filesystem::path init, filesystem::path end);
+    void deleteVersion(string name, filesystem::path end);
 
     /**
      * Replaces the files in the current version with the files in the
@@ -79,6 +82,7 @@ public:
      */
     void useVersion(string& name, filesystem::path curr,
                                   filesystem::path replace);
+
 };
 
 // Initialize static instance of Logger

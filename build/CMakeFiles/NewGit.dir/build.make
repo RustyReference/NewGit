@@ -69,19 +69,19 @@ include CMakeFiles/NewGit.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/NewGit.dir/flags.make
 
-CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o: CMakeFiles/NewGit.dir/flags.make
-CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o: /home/janyan/Projects/git/NewGit/src/logger/filehandler/src/filehandler.cpp
-CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o: CMakeFiles/NewGit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/janyan/Projects/git/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o -MF CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o.d -o CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o -c /home/janyan/Projects/git/NewGit/src/logger/filehandler/src/filehandler.cpp
+CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o: CMakeFiles/NewGit.dir/flags.make
+CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o: /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp
+CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o: CMakeFiles/NewGit.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/janyan/Projects/git/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o -MF CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o.d -o CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o -c /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp
 
-CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/janyan/Projects/git/NewGit/src/logger/filehandler/src/filehandler.cpp > CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.i
+CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp > CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i
 
-CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/janyan/Projects/git/NewGit/src/logger/filehandler/src/filehandler.cpp -o CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.s
+CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp -o CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s
 
 CMakeFiles/NewGit.dir/src/logger/logger.cpp.o: CMakeFiles/NewGit.dir/flags.make
 CMakeFiles/NewGit.dir/src/logger/logger.cpp.o: /home/janyan/Projects/git/NewGit/src/logger/logger.cpp
@@ -113,14 +113,14 @@ CMakeFiles/NewGit.dir/src/main.cpp.s: cmake_force
 
 # Object files for target NewGit
 NewGit_OBJECTS = \
-"CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o" \
+"CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o" \
 "CMakeFiles/NewGit.dir/src/logger/logger.cpp.o" \
 "CMakeFiles/NewGit.dir/src/main.cpp.o"
 
 # External object files for target NewGit
 NewGit_EXTERNAL_OBJECTS =
 
-NewGit: CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o
+NewGit: CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o
 NewGit: CMakeFiles/NewGit.dir/src/logger/logger.cpp.o
 NewGit: CMakeFiles/NewGit.dir/src/main.cpp.o
 NewGit: CMakeFiles/NewGit.dir/build.make

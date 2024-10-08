@@ -129,29 +129,29 @@ NewGit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/build
 .PHONY : NewGit/fast
 
-src/logger/filehandler/src/filehandler.o: src/logger/filehandler/src/filehandler.cpp.o
-.PHONY : src/logger/filehandler/src/filehandler.o
+src/logger/filehandler/filehandler.o: src/logger/filehandler/filehandler.cpp.o
+.PHONY : src/logger/filehandler/filehandler.o
 
 # target to build an object file
-src/logger/filehandler/src/filehandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.o
-.PHONY : src/logger/filehandler/src/filehandler.cpp.o
+src/logger/filehandler/filehandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o
+.PHONY : src/logger/filehandler/filehandler.cpp.o
 
-src/logger/filehandler/src/filehandler.i: src/logger/filehandler/src/filehandler.cpp.i
-.PHONY : src/logger/filehandler/src/filehandler.i
+src/logger/filehandler/filehandler.i: src/logger/filehandler/filehandler.cpp.i
+.PHONY : src/logger/filehandler/filehandler.i
 
 # target to preprocess a source file
-src/logger/filehandler/src/filehandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.i
-.PHONY : src/logger/filehandler/src/filehandler.cpp.i
+src/logger/filehandler/filehandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i
+.PHONY : src/logger/filehandler/filehandler.cpp.i
 
-src/logger/filehandler/src/filehandler.s: src/logger/filehandler/src/filehandler.cpp.s
-.PHONY : src/logger/filehandler/src/filehandler.s
+src/logger/filehandler/filehandler.s: src/logger/filehandler/filehandler.cpp.s
+.PHONY : src/logger/filehandler/filehandler.s
 
 # target to generate assembly for a file
-src/logger/filehandler/src/filehandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/src/filehandler.cpp.s
-.PHONY : src/logger/filehandler/src/filehandler.cpp.s
+src/logger/filehandler/filehandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewGit.dir/build.make CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s
+.PHONY : src/logger/filehandler/filehandler.cpp.s
 
 src/logger/logger.o: src/logger/logger.cpp.o
 .PHONY : src/logger/logger.o
@@ -210,9 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... NewGit"
-	@echo "... src/logger/filehandler/src/filehandler.o"
-	@echo "... src/logger/filehandler/src/filehandler.i"
-	@echo "... src/logger/filehandler/src/filehandler.s"
+	@echo "... src/logger/filehandler/filehandler.o"
+	@echo "... src/logger/filehandler/filehandler.i"
+	@echo "... src/logger/filehandler/filehandler.s"
 	@echo "... src/logger/logger.o"
 	@echo "... src/logger/logger.i"
 	@echo "... src/logger/logger.s"
