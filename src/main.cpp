@@ -8,14 +8,27 @@ namespace fs = filesystem;
 
 void gitInitialize();
 void gitPull();
-void gitPush(std::string versionName);
+void gitPush(string versionName);
+void help();
 
 int main(int argc, char* argv[]) {
-    gitInitialize();
-    gitPush("testversion");
-    //std::filesystem::path init{"./"};
-    //std::filesystem::path log("./log/");
-    //Logger::getInstance().deleteVersion("3.30.4", "./log");
+    string prompt;
+    if(argc <= 1 || argc > 3) {
+        prompt = "help";
+    }
+    else {
+        prompt = argv[1];
+    }
+
+    if(prompt == "push"){
+        gitPush(argv[2]);
+    }
+
+    if(prompt == "help"){
+        help();
+    }
+
+
     return 0;
 }
 
@@ -25,24 +38,24 @@ void gitInitialize() {
 }
 
 // Pulls changes from a remote repository
-void gitPush(std::string versionName) {
+void gitPush(string versionName) {
     if ( !Logger::getInstance().addVersion(versionName, "./", "./.newgit/log/") ) {
         if(Logger::getInstance().state == Logger::State::errAddExist) {
-            std::cout << "Folder exists. Use \'force-push\' to replace instead\n";
+            cout << "Folder exists. Use \'force-push\' to replace instead\n";
         }
-        std::cout << "Could not add version : " << versionName << std::endl;
+        cout << "Could not add version : " << versionName << endl;
         return;
     }
-    std::cout << "Succesfully added version : " << versionName << std::endl;
+    cout << "Succesfully added version : " << versionName << endl;
 }
 
-void forcePush(std::string versionName) {
+void forcePush(string versionName) {
     // true at the end = "force"
     if(!Logger::getInstance().addVersion(versionName, "./", "./.newgit/log", true)) {
-        std::cout << "Could not add version : " << versionName << std::endl;
+        cout << "Could not add version : " << versionName << endl;
         return;
     }
-    std::cout << "Succesfully added version : " << versionName << std::endl;
+    cout << "Succesfully added version : " << versionName << endl;
 }
 
 // Pulls changes from a remote repository
@@ -50,9 +63,14 @@ void gitPull() {
     string name;
     cout << "Enter the name of your new version: ";
     cin >> name;
+}
 
 // Prints all the possible commands the user can make
 void help() {
-    cout << "Help";
+    cout << "Usage : \n";
+    cout << "\tnewgit push <versionName>\n"
+            "\tnewgit pull <versionName>\n"
+            "\tnewgit force-push <versionName>\n"
+            "\tnewgit help\n";
 }
 

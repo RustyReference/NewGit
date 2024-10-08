@@ -2,6 +2,7 @@
 #include <unordered_map>
 #include <string>
 #include <filesystem>
+#include <iostream>
 #include "logger.h"
 
 using namespace std;
@@ -12,7 +13,7 @@ Logger::Logger() {
 } 
 
 Logger::~Logger() {
-    cout << "THE PROGRAM SHOULD BE TERMINATING";
+    std::cerr << "THE PROGRAM SHOULD BE TERMINATING";
 }
 
 bool Logger::addVersion(string name, filesystem::path init,
