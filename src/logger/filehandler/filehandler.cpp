@@ -1,3 +1,5 @@
+#define NOTENV
+
 #include "filehandler.h"
 #include <iostream>
 #include <ranges>
@@ -102,4 +104,62 @@ bool FH::mkdirp( path folderPath )
     }
 
     return true;
+}
+
+void FH::copyContents( path from, path to ) { 
+    for(auto &entry : std::filesystem::directory_iterator(from)) {
+        std::string path = entry.path();
+        std::filesystem::path targetPath = to/path;
+        std::cout << targetPath << std::endl;
+        // Do NOT copy .newgit folder
+        if( entry.is_directory() && path.contains(".newgit") ) {
+            continue;
+        }
+        // Do copy everything else lmao
+        std::filesystem::copy(path, targetPath
+            , std::filesystem::copy_options::overwrite_existing
+            | std::filesystem::copy_options::recursive);
+    }
+}
+
+#include <iostream>
+
+void FH::dirCpy( path &from, path &to ) {
+    for(auto &entry : directory_iterator(from)) {
+        // Set up the copy path
+        path entryPath = entry.path();
+        std::string newFileName = entryPath.filename();
+        path newFile = to/newFileName;
+        
+        // If directory make the directory
+        if( entry.is_directory() ) {
+            mkdirp( newFile );
+            dirCpy(entryPath, newFile);
+        }
+        
+#ifdef NOTENV
+        else if( !(newFileName.contains("NewGit")) ){
+#endif
+#ifndef NOTENV
+        else {
+#endif
+            std::cout << newFile << std::endl;
+            
+            // Read from
+            std::ifstream src(entryPath, std::ios_base::binary | std::ios_base::in);
+            if(!src.is_open()) {
+                std::cerr << "Could not retrieve file " << entryPath << std::endl; 
+                continue;
+            }
+
+            // Write to
+            std::ofstream out(newFile, std::ios_base::binary | std::ios_base::out);
+            if(!out.is_open()) {
+                std::cerr << "Could not write to file " << entryPath << std::endl;
+                continue;
+            }
+
+            out << src.rdbuf();
+        }
+    }
 }

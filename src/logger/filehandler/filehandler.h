@@ -20,11 +20,13 @@ namespace FH
         copyError,
     };
 
+    void dirCpy( path &from, path &to );
     bool read( path filepath, std::stringstream& buffer );
     bool write( path filepath, std::string prompt); 
     bool append( path filepath, std::string prompt );
     bool mkdir( path folderPath );
     bool mkdirp( path folderPath );
+    void copyContents( path from, path to );
 }
 
 #endif

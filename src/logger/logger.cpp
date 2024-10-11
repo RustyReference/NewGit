@@ -1,4 +1,3 @@
-
 #include <unordered_map>
 #include <string>
 #include <filesystem>
@@ -19,26 +18,16 @@ Logger::~Logger() {
 bool Logger::addVersion(string name, filesystem::path init,
                         filesystem::path end, bool replace) 
 {
+    // Can't replace existing versions without specifying.
     if ( !replace && std::filesystem::exists(end/name) ) {
         state = Logger::State::errAddExist;
         return false; 
     }
+
+    // Add version 
     FH::mkdirp( end/name );
-    for(auto &entry : std::filesystem::directory_iterator(init)) {
-        // Get path name from the last '/'
-        // For example "./a/b/c/hello" would turn into hello
-        std::string path = entry.path();
-        if( path[path.length()] == '/' ) {
-            path.pop_back();
-        }
-        int nameStart = path.rfind('/');
-        std::string pathName = path.c_str()+nameStart+1;
-        // copy path if it's not the .newgit directory
-        if(pathName != ".newgit") {
-            std::filesystem::copy(path, end/name
-                , std::filesystem::copy_options::recursive);
-        }
-    }
+    FH::copyContents(init, end/name);
+    
     return true;
 }
 
@@ -46,8 +35,14 @@ void Logger::deleteVersion(string name, filesystem::path end) {
     std::filesystem::remove_all( end/name );
 }
 
+// Initialize static instance of Logger. 
 Logger* Logger::instance = new Logger();
 
-// Initialize static instance of Logger. 
 
 
+// get the necessary files from a version
+void Logger::useVersion(string name, filesystem::path curr
+                                , filesystem::path replace ){
+    std::filesystem::path from = replace/name;
+    FH::dirCpy(from, curr);
+}

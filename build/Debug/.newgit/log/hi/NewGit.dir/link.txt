@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o CMakeFiles/NewGit.dir/src/logger/logger.cpp.o CMakeFiles/NewGit.dir/src/main.cpp.o -o NewGit

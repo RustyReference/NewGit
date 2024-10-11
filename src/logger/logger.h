@@ -80,9 +80,8 @@ public:
      *          the version of the source code the user wants to
      *          backtrack/fastforward to.
      */
-    void useVersion(string& name, filesystem::path curr,
+    void useVersion(string name, filesystem::path curr,
                                   filesystem::path replace);
-
 };
 
 // Initialize static instance of Logger
