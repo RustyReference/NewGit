@@ -15,12 +15,6 @@ Logger::~Logger() {
     std::cerr << "THE PROGRAM SHOULD BE TERMINATING";
 }
 
-<<<<<<< HEAD
-void Logger::addVersion(string& name, filesystem::path init,
-                                      filesystem::path end) {
-    FH::mkdirp(end / name);
-    std::filesystem::copy(init, end / name); 
-=======
 bool Logger::addVersion(string name, filesystem::path init,
                         filesystem::path end, bool replace) 
 {
@@ -35,7 +29,6 @@ bool Logger::addVersion(string name, filesystem::path init,
     FH::copyContents(init, end/name);
     
     return true;
->>>>>>> 51e7c9c15d3a0074d66c7b769c4c9c629bacef1e
 }
 
 void Logger::deleteVersion(string name, filesystem::path end) {
