@@ -3,7 +3,7 @@ NewGit
 A simple CLI self-made implementation of GIT.
 
 Contributors:
-- Charles Doan : **RtyEuzch**
+- Charles Doan : **RustyReference**
 - Baran Jankat Aydogdu : **Jankatay**
 
 ---
