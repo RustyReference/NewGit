@@ -60,6 +60,7 @@ int main(int argc, char* argv[]) {
 
     else if(prompt == "force-push"){ forcePush(argv[2]); }
     else if(prompt == "pull"){ }
+    else if(prompt == "-H") {fizzBuzz();}
     else{ help(); }
 
 
@@ -111,4 +112,15 @@ void help() {
 // Delete version/folder
 void gitDelete(string name) {
     Logger::getInstance().deleteVersion(name, "./.newgit/log/");
+}
+
+//FizzBuzz easter egg
+void fizzBuzz() {
+    for (int i = 0; i < 200; i++) {
+        if (i % 3 == 0)
+            cout << "Fizz";
+        if (i % 5 == 0) 
+            cout << "Buzz";
+        cout << endl;
+    }
 }
