@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/janyan/Projects/git/NewGit
+CMAKE_SOURCE_DIR = /home/jan/Projects/personal/NewGit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/janyan/Projects/git/NewGit/build
+CMAKE_BINARY_DIR = /home/jan/Projects/personal/NewGit/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/NewGit.dir/depend.make
@@ -70,46 +70,46 @@ include CMakeFiles/NewGit.dir/progress.make
 include CMakeFiles/NewGit.dir/flags.make
 
 CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o: CMakeFiles/NewGit.dir/flags.make
-CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o: /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp
+CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o: /home/jan/Projects/personal/NewGit/src/logger/filehandler/filehandler.cpp
 CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o: CMakeFiles/NewGit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/janyan/Projects/git/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o -MF CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o.d -o CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o -c /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jan/Projects/personal/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o -MF CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o.d -o CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o -c /home/jan/Projects/personal/NewGit/src/logger/filehandler/filehandler.cpp
 
 CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp > CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jan/Projects/personal/NewGit/src/logger/filehandler/filehandler.cpp > CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.i
 
 CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/janyan/Projects/git/NewGit/src/logger/filehandler/filehandler.cpp -o CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jan/Projects/personal/NewGit/src/logger/filehandler/filehandler.cpp -o CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.s
 
 CMakeFiles/NewGit.dir/src/logger/logger.cpp.o: CMakeFiles/NewGit.dir/flags.make
-CMakeFiles/NewGit.dir/src/logger/logger.cpp.o: /home/janyan/Projects/git/NewGit/src/logger/logger.cpp
+CMakeFiles/NewGit.dir/src/logger/logger.cpp.o: /home/jan/Projects/personal/NewGit/src/logger/logger.cpp
 CMakeFiles/NewGit.dir/src/logger/logger.cpp.o: CMakeFiles/NewGit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/janyan/Projects/git/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NewGit.dir/src/logger/logger.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewGit.dir/src/logger/logger.cpp.o -MF CMakeFiles/NewGit.dir/src/logger/logger.cpp.o.d -o CMakeFiles/NewGit.dir/src/logger/logger.cpp.o -c /home/janyan/Projects/git/NewGit/src/logger/logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jan/Projects/personal/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NewGit.dir/src/logger/logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewGit.dir/src/logger/logger.cpp.o -MF CMakeFiles/NewGit.dir/src/logger/logger.cpp.o.d -o CMakeFiles/NewGit.dir/src/logger/logger.cpp.o -c /home/jan/Projects/personal/NewGit/src/logger/logger.cpp
 
 CMakeFiles/NewGit.dir/src/logger/logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewGit.dir/src/logger/logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/janyan/Projects/git/NewGit/src/logger/logger.cpp > CMakeFiles/NewGit.dir/src/logger/logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jan/Projects/personal/NewGit/src/logger/logger.cpp > CMakeFiles/NewGit.dir/src/logger/logger.cpp.i
 
 CMakeFiles/NewGit.dir/src/logger/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewGit.dir/src/logger/logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/janyan/Projects/git/NewGit/src/logger/logger.cpp -o CMakeFiles/NewGit.dir/src/logger/logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jan/Projects/personal/NewGit/src/logger/logger.cpp -o CMakeFiles/NewGit.dir/src/logger/logger.cpp.s
 
 CMakeFiles/NewGit.dir/src/main.cpp.o: CMakeFiles/NewGit.dir/flags.make
-CMakeFiles/NewGit.dir/src/main.cpp.o: /home/janyan/Projects/git/NewGit/src/main.cpp
+CMakeFiles/NewGit.dir/src/main.cpp.o: /home/jan/Projects/personal/NewGit/src/main.cpp
 CMakeFiles/NewGit.dir/src/main.cpp.o: CMakeFiles/NewGit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/janyan/Projects/git/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NewGit.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewGit.dir/src/main.cpp.o -MF CMakeFiles/NewGit.dir/src/main.cpp.o.d -o CMakeFiles/NewGit.dir/src/main.cpp.o -c /home/janyan/Projects/git/NewGit/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jan/Projects/personal/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NewGit.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewGit.dir/src/main.cpp.o -MF CMakeFiles/NewGit.dir/src/main.cpp.o.d -o CMakeFiles/NewGit.dir/src/main.cpp.o -c /home/jan/Projects/personal/NewGit/src/main.cpp
 
 CMakeFiles/NewGit.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewGit.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/janyan/Projects/git/NewGit/src/main.cpp > CMakeFiles/NewGit.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jan/Projects/personal/NewGit/src/main.cpp > CMakeFiles/NewGit.dir/src/main.cpp.i
 
 CMakeFiles/NewGit.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewGit.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/janyan/Projects/git/NewGit/src/main.cpp -o CMakeFiles/NewGit.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jan/Projects/personal/NewGit/src/main.cpp -o CMakeFiles/NewGit.dir/src/main.cpp.s
 
 # Object files for target NewGit
 NewGit_OBJECTS = \
@@ -125,7 +125,7 @@ NewGit: CMakeFiles/NewGit.dir/src/logger/logger.cpp.o
 NewGit: CMakeFiles/NewGit.dir/src/main.cpp.o
 NewGit: CMakeFiles/NewGit.dir/build.make
 NewGit: CMakeFiles/NewGit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/janyan/Projects/git/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable NewGit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jan/Projects/personal/NewGit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable NewGit"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NewGit.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/NewGit.dir/clean:
 .PHONY : CMakeFiles/NewGit.dir/clean
 
 CMakeFiles/NewGit.dir/depend:
-	cd /home/janyan/Projects/git/NewGit/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/janyan/Projects/git/NewGit /home/janyan/Projects/git/NewGit /home/janyan/Projects/git/NewGit/build /home/janyan/Projects/git/NewGit/build /home/janyan/Projects/git/NewGit/build/CMakeFiles/NewGit.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/jan/Projects/personal/NewGit/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jan/Projects/personal/NewGit /home/jan/Projects/personal/NewGit /home/jan/Projects/personal/NewGit/build /home/jan/Projects/personal/NewGit/build /home/jan/Projects/personal/NewGit/build/CMakeFiles/NewGit.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/NewGit.dir/depend
 

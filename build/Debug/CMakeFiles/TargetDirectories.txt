@@ -1,3 +1,3 @@
-/home/janyan/Projects/git/NewGit/build/Debug/CMakeFiles/NewGit.dir
-/home/janyan/Projects/git/NewGit/build/Debug/CMakeFiles/edit_cache.dir
-/home/janyan/Projects/git/NewGit/build/Debug/CMakeFiles/rebuild_cache.dir
+/home/jan/Projects/personal/NewGit/build/Debug/CMakeFiles/NewGit.dir
+/home/jan/Projects/personal/NewGit/build/Debug/CMakeFiles/edit_cache.dir
+/home/jan/Projects/personal/NewGit/build/Debug/CMakeFiles/rebuild_cache.dir
