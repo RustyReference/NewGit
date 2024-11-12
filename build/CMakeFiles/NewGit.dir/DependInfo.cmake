@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/jan/Projects/personal/NewGit/src/logger/filehandler/filehandler.cpp" "CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o" "gcc" "CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o.d"
-  "/home/jan/Projects/personal/NewGit/src/logger/logger.cpp" "CMakeFiles/NewGit.dir/src/logger/logger.cpp.o" "gcc" "CMakeFiles/NewGit.dir/src/logger/logger.cpp.o.d"
-  "/home/jan/Projects/personal/NewGit/src/main.cpp" "CMakeFiles/NewGit.dir/src/main.cpp.o" "gcc" "CMakeFiles/NewGit.dir/src/main.cpp.o.d"
+  "/home/jan/Projects/self/NewGit/src/logger/filehandler/filehandler.cpp" "CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o" "gcc" "CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o.d"
+  "/home/jan/Projects/self/NewGit/src/logger/logger.cpp" "CMakeFiles/NewGit.dir/src/logger/logger.cpp.o" "gcc" "CMakeFiles/NewGit.dir/src/logger/logger.cpp.o.d"
+  "/home/jan/Projects/self/NewGit/src/main.cpp" "CMakeFiles/NewGit.dir/src/main.cpp.o" "gcc" "CMakeFiles/NewGit.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/jan/Projects/personal/NewGit/CMakeLists.txt"
+  "/home/jan/Projects/self/NewGit/CMakeLists.txt"
   "CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeSystem.cmake"
   "/usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in"

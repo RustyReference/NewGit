@@ -122,8 +122,6 @@ void FH::copyContents( path from, path to ) {
     }
 }
 
-#include <iostream>
-
 void FH::dirCpy( path &from, path &to ) {
     for(auto &entry : directory_iterator(from)) {
         // Set up the copy path

@@ -13,6 +13,7 @@ void gitPull(string version, std::filesystem::path branch);
 void gitPush(string versionName, std::filesystem::path branch);
 void gitDelete(string versionName, std::filesystem::path branch);
 void forcePush(string versionName, std::filesystem::path branch);
+void listBranches(std::filesystem::path newgitPath);
 void help();
 void fizzBuzz();
 
@@ -29,7 +30,17 @@ int main(int argc, char* argv[]) {
 			return 0;
 		}
 
+
     prompt = argv[1];
+		// Help
+  	if(prompt == "-H") {
+			fizzBuzz();}
+    else if (prompt == "help") {
+			help(); 
+			return 0;
+		}
+
+		// clean
 		if(prompt == "clean") {
 			if(std::filesystem::remove_all(".newgit")) {
 				cout << "Succesfully cleaned up the newgit from this project" << endl;
@@ -40,6 +51,12 @@ int main(int argc, char* argv[]) {
 			return 0;
 		}	
 
+		// status
+		if(prompt == "status") {
+			listBranches("./.newgit/");
+			return 0;
+		}
+
 		std::stringstream currentBranch;
 		if(!FH::read(".newgit/log", currentBranch)) {
 			cerr << "Could not read branch" << endl;
@@ -48,6 +65,19 @@ int main(int argc, char* argv[]) {
 		std::string branch;
 		currentBranch >> branch;
 		std::filesystem::path branchPath = ".newgit/"+branch;
+
+		if(prompt == "delete") {
+			if(!std::filesystem::exists(branchPath)) {
+				cerr << "Unexisting branch" << endl;
+			}
+			else if(std::filesystem::remove_all(branchPath)) {
+				cout << "Succesfully deleted the branch " << branch << endl;
+			}
+			else {
+				cerr << "Could not delete the branch, check permissions" << endl;
+			}
+			return 0;
+		}
 
 		if(argc <= 2) {
 			help();
@@ -78,15 +108,26 @@ int main(int argc, char* argv[]) {
     }
 
     // Delete
-    else if(prompt == "delete") {
+    else if(prompt == "trim") {
         if(argc < 3) {
             std::cout << "Not enough params!\n";
             help();
         }
         else {
-            gitDelete(version, branchPath);
+          	gitDelete(version, branchPath);
         }
     }
+
+	// Select branch
+	else if(prompt == "select") {
+		if(argc < 3) {
+			std::cout << "Not enough params!\n";
+			help();
+		}
+		else {
+			FH::write("./.newgit/log", argv[2]);	
+		}
+	}
 
 		// forced push
     else if(prompt == "force-push") { 
@@ -96,11 +137,6 @@ int main(int argc, char* argv[]) {
 		// pull 
     else if(prompt == "pull") { 
 			gitPull(version, branchPath);
-		}
-    else if(prompt == "-H") {
-			fizzBuzz();}
-    else{ 
-			help(); 
 		}
 
     return 0;
@@ -122,7 +158,7 @@ void gitInitialize() {
 		}
 }
 
-// Pulls changes from a remote repository
+// Push changes to a remote repository
 void gitPush(string versionName, std::filesystem::path branch) {
     if ( !Logger::getInstance().addVersion(versionName, "./", branch ) ) {
         if(Logger::getInstance().state == Logger::State::errAddExist) {
@@ -155,6 +191,10 @@ void help() {
     cout << "\tnewgit push <versionName>\n"
             "\tnewgit pull <versionName>\n"
             "\tnewgit force-push <versionName>\n"
+						"\tnewgit trim <versionName>\n"
+            "\tnewgit select <branchName>\n"
+            "\tnewgit delete <branchName>\n"
+            "\tnewgit status\n"
             "\tnewgit help\n";
 }
 
@@ -172,4 +212,12 @@ void fizzBuzz() {
             cout << "Buzz";
         cout << endl;
     }
+}
+
+void listBranches(std::filesystem::path newgitPath) {
+	for(auto dir : std::filesystem::directory_iterator(newgitPath)) {
+		if(is_directory(dir)) {
+		  cout << dir << endl;
+		}
+	}
 }

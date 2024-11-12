@@ -1,7 +1,7 @@
 CMakeFiles/NewGit.dir/src/logger/filehandler/filehandler.cpp.o: \
- /home/jan/Projects/personal/NewGit/src/logger/filehandler/filehandler.cpp \
+ /home/jan/Projects/self/NewGit/src/logger/filehandler/filehandler.cpp \
  /usr/include/stdc-predef.h \
- /home/jan/Projects/personal/NewGit/src/logger/filehandler/filehandler.h \
+ /home/jan/Projects/self/NewGit/src/logger/filehandler/filehandler.h \
  /usr/include/c++/14.2.1/fstream \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \

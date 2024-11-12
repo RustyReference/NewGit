@@ -1,6 +1,6 @@
 CMakeFiles/NewGit.dir/src/main.cpp.o: \
- /home/jan/Projects/personal/NewGit/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/14.2.1/iostream \
+ /home/jan/Projects/self/NewGit/src/main.cpp /usr/include/stdc-predef.h \
+ /usr/include/c++/14.2.1/iostream \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -167,7 +167,7 @@ CMakeFiles/NewGit.dir/src/main.cpp.o: \
  /usr/include/c++/14.2.1/bits/unicode-data.h \
  /usr/include/c++/14.2.1/bits/ostream.tcc /usr/include/c++/14.2.1/istream \
  /usr/include/c++/14.2.1/bits/istream.tcc \
- /home/jan/Projects/personal/NewGit/src/./logger/logger.h \
+ /home/jan/Projects/self/NewGit/src/./logger/logger.h \
  /usr/include/c++/14.2.1/unordered_map \
  /usr/include/c++/14.2.1/bits/unordered_map.h \
  /usr/include/c++/14.2.1/bits/hashtable.h \
@@ -190,9 +190,9 @@ CMakeFiles/NewGit.dir/src/main.cpp.o: \
  /usr/include/c++/14.2.1/bits/stl_uninitialized.h \
  /usr/include/c++/14.2.1/bits/fs_dir.h \
  /usr/include/c++/14.2.1/bits/fs_ops.h \
- /home/jan/Projects/personal/NewGit/src/./logger/filehandler/filehandler.h \
+ /home/jan/Projects/self/NewGit/src/./logger/filehandler/filehandler.h \
  /usr/include/c++/14.2.1/fstream \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/14.2.1/bits/fstream.tcc \
- /home/jan/Projects/personal/NewGit/src/./logger/filehandler/filehandler.h
+ /home/jan/Projects/self/NewGit/src/./logger/filehandler/filehandler.h

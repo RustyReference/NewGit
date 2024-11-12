@@ -1,5 +1,5 @@
 CMakeFiles/NewGit.dir/src/logger/logger.cpp.o: \
- /home/jan/Projects/personal/NewGit/src/logger/logger.cpp \
+ /home/jan/Projects/self/NewGit/src/logger/logger.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14.2.1/unordered_map \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -192,8 +192,8 @@ CMakeFiles/NewGit.dir/src/logger/logger.cpp.o: \
  /usr/include/c++/14.2.1/bits/stl_uninitialized.h \
  /usr/include/c++/14.2.1/bits/fs_dir.h \
  /usr/include/c++/14.2.1/bits/fs_ops.h /usr/include/c++/14.2.1/iostream \
- /home/jan/Projects/personal/NewGit/src/logger/logger.h \
- /home/jan/Projects/personal/NewGit/src/logger/filehandler/filehandler.h \
+ /home/jan/Projects/self/NewGit/src/logger/logger.h \
+ /home/jan/Projects/self/NewGit/src/logger/filehandler/filehandler.h \
  /usr/include/c++/14.2.1/fstream \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++io.h \

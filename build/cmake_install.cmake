@@ -1,4 +1,4 @@
-# Install script for directory: /home/jan/Projects/personal/NewGit
+# Install script for directory: /home/jan/Projects/self/NewGit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -57,6 +57,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/jan/Projects/personal/NewGit/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/jan/Projects/self/NewGit/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
